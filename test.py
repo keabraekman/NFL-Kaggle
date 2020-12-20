@@ -20,8 +20,8 @@ def all_game_ids():
     with open('../nfl-big-data-bowl-2021/plays.csv') as f:
         mycsv = csv.reader(f)
         for row in mycsv:
-            game_ids.append(row[0])
+            if(row[0] not in game_ids):
+                game_ids.append(row[0])
     return game_ids
 
-
-# print(score('2018122201'))
+print(all_game_ids())
