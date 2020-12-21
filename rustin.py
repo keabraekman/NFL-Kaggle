@@ -7,3 +7,8 @@ import csv
 
 
 #next, create function that returns their playerid's, similar to all game ids function
+
+# edit in here, run in terminal, save/push to git on terminal:
+#1. git add .
+#2. git commit -m "message"
+#3. git push
