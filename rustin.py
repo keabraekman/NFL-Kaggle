@@ -16,15 +16,21 @@ def stats(nflId):
     with open('../nfl-big-data-bowl-2021/players.csv') as f:
         mycsv = csv.reader(f)
         for row in mycsv:
+            #print(row)
             playerid = row[0]
-            if(current_nflId == nflId):
+            if(playerid == nflId):
                 player = row
-        return [str(player[6]), float(player[1]), float(player[2]), str(player[3]), str(player[4]),
-                str(player[5])]
+                return [str(player[6]), str(player[1]), str(player[2]), str(player[3]),
+                str(player[4]),str(player[5])]
+##        return [str(row[6]), str(row[1]), str(row[2]), str(row[3]),
+##                str(row[4]),str(row[5])]
+##stats(2539653)
 
 
 
 #next, create function that returns their playerid's, similar to all game ids function
+
+
 
 def all_player_ids():
     player_ids = []
@@ -36,7 +42,6 @@ def all_player_ids():
     return player_ids
 
 print(all_player_ids())
-
 
 
 
